@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Temple Visit</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            font-size: 110%; /* Increase font size by 10% */
+        }
+
+        header {
+            background-color: rgba(255, 204, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        header:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('C:\Users\91784\Videos\Decided\goldentemple.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section {
+            width: calc(50% - 20px); /* Adjust width to fit two sections in a row */
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        img {
+            max-width: 100%; /* Ensure image does not exceed its container width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove extra space below the image */
+            margin: 0 auto; /* Center image horizontally */
+            border-radius: 10px; /* Apply border-radius to match section */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+         .menu-bar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+       /* .menu-bar a {
+             float: left; 
+             display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }  */
+
+
+
+.menu-bar{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    min-width: 50px;
+    background: #0d0f1b
+}
+
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+ul li {
+list-style: none;
+}
+
+ul li:before{
+content: attr(data-text);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, 50%);
+color: #fff;
+font-size: 6em;
+font-weight: 700;
+pointer-events: none;
+opacity: 0;
+letter-spacing: 20px;
+transition: 0.5s;
+white-space: nowrap;
+}
+
+ul li:hover:before{
+    opacity: 0.05s;
+letter-spacing: 0px;
+}
+
+}
+ul li a {
+    position: relative;
+    display: inline-block;
+padding: 6px 15px;
+text-decoration: none;
+background: #2196f3;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 2px;
+overflow: hidden;
+transition: 0.5s;
+z-index: 1;
+
+}
+
+ul:hover li a{
+    opacity: 0;
+}
+ul li a:hover{
+    transform: scale(1.4);
+    z-index: 1000;
+background: #ff3f81;
+opacity: 1;
+}
+
+ul li a:before {
+     content: '';
+     position: absolute;
+top: 0;
+left: -100px;
+width: 60px;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+transform: skewX(35deg);
+transition: 0s;
+}
+
+ul li a:hover:before
+{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay:0.2s ;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Golden Temple Visit</h1>
+        <div class="menu-bar">
+            <ul style="list-style-type: none;">
+           <li data-text=" About"><a href="#about">About</a> </li>
+           <li data-text="Image"> <a href="#image">Image</a></li>
+           <li data-text="Features"><a href="#special">Features</a></li>
+           <li data-text="Expenses"> <a href="#eateries">Expenses</a></li>
+           <li data-text="Guide"> <a href="#guide">Guide</a></li>
+           </ul>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="about">
+            <h2>About Leh-Ladakh, Jammu and Kashmir</h2>
+            <p>Adventure tourism in Leh-Ladakh, Jammu and Kashmir, traces back to its nomadic heritage, with activities like trekking and camel safaris dating centuries back. Today, it's a hotspot for modern adventurers, offering everything from high-altitude trekking to white-water rafting, attracting thrill-seekers from across the globe.</p>
+        </section>
+        <section id="image" class="image">
+           <h2>Leh- Ladakh Image</h2>
+            <img src=" C:\Users\91784\Videos\My Web Project\WEB PROJECT\bike.jpg" alt="Golden Temple Image">
+        </section>
+        <section id="special" class="special">
+                        <h2>Special Features</h2>
+            <p>ChatGPT
+                Leh-Ladakh's adventure tourism stands out for its high-altitude terrain and diverse activities, including trekking ancient paths and exploring remote valleys through exhilarating river rafting.</p>
+        </section>
+        <section id="eateries" class="eateries">
+            <h2>Eateries Nearby</h2>
+            <p>Nearby eateries in Leh-Ladakh offer a delightful blend of local Ladakhi cuisine and international flavors, catering to diverse tastes amidst the region's stunning vistas.</p>
+        </section>
+        <section id="expenses" class="expenses">
+            <h2>Estimated Expenses</h2>
+            <p>Estimated expenses for a trip to Leh-Ladakh for a few days with two persons, expect to spend around INR 25000 including accommodation, meals, and transportation.</p>
+        </section>
+        <section id="guide" class="guide">
+            <h2>Local Guide</h2>
+            <p> Anmol Saini <br> Contact- 7849979009</p>
+    </main>
+    <footer>
+        
+        <p>&copy; 2024 Golden Temple Visit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
