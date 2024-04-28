@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <style>
+      Edit Full Screen Copy code body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 400px;
+        height: 500px;
+        background-color: #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+        background-size: 400% 400%;
+        animation: Gradient 3s ease infinite;
+        z-index: -1;
+      }
+
+      @keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 2rem;
+      }
+
+      input {
+        width: 80%;
+        padding: 0.7rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+        color: #333;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        box-shadow: 0 0 5px rgba(255, 154, 158, 0.5);
+      }
+
+      .otpverify {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        padding: 0.7rem 2rem;
+        background-color: #ff9a9e;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #fad0c4;
+      }
+
+      .send-otp {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+      }
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
+  <body>
+    <div class="form">
+      <h1>OTP</h1>
+      <input type="email" id="email" placeholder="Enter emial..." />
+      <div class="otpverify">
+        <input
+          type="text"
+          id="otp_inp"
+          placeholder="Enter otp sent to your email..."
+        />
+        <button class="btn" id="otp_btn">Verify</button>
+      </div>
+      <button class="btn" onclick="sendOTP()">Send otp</button>
+    </div>
+
+    <script>
+        function sendOTP() {
+            const email = document.getElementById("email");
+            const otpverify = document.getElementsByClassName("otpverify")[0];
+    
+            let otp_val = Math.floor(Math.random() * 10000);
+            let emailbody = `<h2> Your otp is </h2> ${otp_val}`;
+    
+            Email.send({
+                SecureToken: "23eb95d6-01a7-482e-8e20-ec72aa4552fa",
+                To: email.value,
+                From: "anmolsaini87.40@gmail.com",
+                Subject: "OTP for verification ",
+                Body: emailbody,
+            }).then((message) => {
+                if (message === "OK") {
+                    alert("OTP sent to your email " + email.value);
+    
+                    otpverify.style.display = "flex";
+                    const otp_inp = document.getElementById("otp_inp");
+                    const otp_btn = document.getElementById("otp_btn");
+    
+                    otp_btn.addEventListener("click", () => {
+                        if (otp_inp.value == otp_val) {
+                            alert("Email address verified.");
+                            // Redirect to firstpage.html after successful OTP verification
+                            window.location.href = "/firstpage";
+                        } else {
+                            alert("Invalid OTP.");
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+    
+  </body>
+</html>

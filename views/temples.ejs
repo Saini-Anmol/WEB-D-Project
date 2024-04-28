@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Tourism</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .cell {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden; /* Added to hide overflow for hover effect */
+            position: relative; /* Added for hover effect */
+        }
+
+        .cell:hover {
+            transform: translateY(-5px);
+        }
+
+        .image {
+            width: 100%;
+            height: 200px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensure the image covers the container */
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.5s ease; /* Added for hover effect */
+        }
+
+        .cell:hover .image {
+            transform: scale(1.1); /* Added for hover effect */
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .description {
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00695c;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f57c00;
+        }
+
+        @media screen and (max-width: 768px) {
+            .cell {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .cell {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Indian Tourism</h1>
+    <div class="container">
+        <div class="cell">
+           <a href="/goldentemple"> <img class="image" src="/goldentemple.jpg " alt="Image 1"></a>
+            <h2>Temples</h2>
+            <div class="caption">Golden Temple, Amritsar</div>
+            <p class="description">The Golden Temple, also known as Sri Harmandir Sahib, is a symbol of human brotherhood and equality. The stunning architecture and the serene ambiance make it one of the most revered spiritual sites in India.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Akshardhamtemple,.jpg" alt="Image 2">
+            <h2>Temples</h2>
+            <div class="caption">Akshardham Temple, Delhi</div>
+            <p class="description">Akshardham Temple is a marvel of modern architecture and craftsmanship. It combines ancient Indian wisdom with modern technology to create an immersive and enlightening experience for visitors.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Meenakshitemple.jpg" alt="Image 3">
+            <h2>Temples</h2>
+            <div class="caption">Meenakshi Temple, Madurai</div>
+            <p class="description">The Meenakshi Temple is dedicated to Goddess Parvati, known as Meenakshi, and her consort Lord Shiva. It's renowned for its towering gopurams (gateway towers), intricate carvings, and vibrant festivals.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Somnathtemple,.jpg " alt="Image 4">
+            <h2>Temples</h2>
+            <div class="caption">Somnath Temple, Gujarat</div>
+            <p class="description">Somnath Temple, located on the western coast of Gujarat, is one of the 12 Jyotirlingas dedicated to Lord Shiva. It has a rich history, having been destroyed and rebuilt several times over the centuries.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Tirupati Balajitemple.jpg" alt="Image 5">
+            <h2>Temples</h2>
+            <div class="caption">Tirupati Balaji Temple, Andhra Pradesh</div>
+            <p class="description">Tirupati Balaji Temple is one of the wealthiest and most visited temples in the world. Dedicated to Lord Venkateswara, it attracts millions of devotees each year who come to seek the blessings of the deity.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Kedarnathtemple.jpg " alt="Image 6">
+            <h2>Temples</h2>
+            <div class="caption">Kedarnath Temple, Uttarakhand</div>
+            <p class="description">Kedarnath Temple, nestled in the majestic Himalayas, is one of the holiest Hindu shrines dedicated to Lord Shiva. It's a challenging pilgrimage destination that offers breathtaking views and spiritual solace.</p>
+        </div>
+        <!-- New Temples -->
+        <div class="cell">
+            <img class="image" src="/Vaishno Devi Temple.jpg" alt="Image 7">
+            <h2>Temples</h2>
+            <div class="caption">Vaishno Devi Temple, Jammu and Kashmir</div>
+            <p class="description">Vaishno Devi Temple, located in the Trikuta Mountains, is one of the most visited pilgrimage sites in India. Devotees trek uphill to seek the blessings of the Goddess Vaishno Devi.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Badrinath Temple.jpg" alt="Image 8">
+            <h2>Temples</h2>
+            <div class="caption">Badrinath Temple, Uttarakhand</div>
+            <p class="description">Badrinath Temple, situated on the banks of the Alaknanda River, is one of the Char Dham pilgrimage sites. It is dedicated to Lord Badrinath and attracts devotees from all over the world.</p>
+        </div>
+        <div class="cell">
+            <img class="image" src="/Jagannath Temple.jpg" alt="Image 9">
+            <h2>Temples</h2>
+            <div class="caption">Jagannath Temple, Puri</div>
+            <p class="description">Jagannath Temple is a major pilgrimage destination for Hindus, especially during the annual Rath Yatra festival. It's dedicated to Lord Jagannath, Balabhadra, and Subhadra.</p>
+        </div>
+       
+    </div>
+</body>
+
+</html>
